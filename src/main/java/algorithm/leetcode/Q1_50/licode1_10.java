@@ -12,24 +12,9 @@ import java.util.Set;
  * @Version V1.0
  **/
 public class licode1_10 {
-    /*
-        licode1
-        DEC：
-            求解A+B为定值的数据下标
-     */
-    public int[] twoSum(int[] nums, int target) throws IllegalAccessException {
-        for (int i = 0; i < nums.length; i++) {
-            for (int j = i + 1; j < nums.length; j++) {
-                if (nums[j] == target - nums[i]) {
-                    return new int[]{i, j};
-                }
-            }
-        }
-        throw new IllegalAccessException("No solution");
-    }
+
 
     /*
-        licode2
         DES：
             AB链表求和
      */
@@ -66,7 +51,6 @@ public class licode1_10 {
     }
 
     /*
-        licode3
         DES:
             求解最长不重复子串
      */
@@ -86,7 +70,6 @@ public class licode1_10 {
         return ans;
     }
     /*
-        licode4
         DES：
             求解AB，Sorted数组中位数
      */
@@ -126,8 +109,12 @@ public class licode1_10 {
         }
         return 0.0;
     }
-
-    public static void main(String[] args) {
+    /*
+     * DES：
+     *     [测试HashTable算法中的与运算]
+     *
+     */
+    private static void HashTest() {
         Scanner in = new Scanner(System.in);
 
         int number = 0;
@@ -137,4 +124,6 @@ public class licode1_10 {
             System.out.println("input number & 0x7FFFFFFF ="+ result);
         }
     }
+    
+
 }
