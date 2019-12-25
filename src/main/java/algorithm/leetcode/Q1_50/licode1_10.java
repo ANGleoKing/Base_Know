@@ -1,9 +1,11 @@
 package algorithm.leetcode.Q1_50;
 
+import java.util.HashSet;
 import java.util.Scanner;
+import java.util.Set;
 
 /**
- * @ClassName licode1
+ * @ClassNamelicode1
  * @Description
  * @Author ANGLE0
  * @Date2019/12/20 14:24
@@ -48,6 +50,25 @@ public class licode1_10 {
         return res.next;
     }
 
+    /*
+        DES:
+            求解最长不重复子串
+     */
+    public int lengthOfLongestSubstring(String s) {
+        int n = s.length();
+        Set<Character> set = new HashSet<Character>();
+        int ans = 0, i = 0, j = 0;
+        while (i < n && j < n) {
+            if (!set.contains(s.charAt(j))){
+                set.add(s.charAt(j++));
+                ans = Math.max(ans, j - i);
+            }
+            else {
+                set.remove(s.charAt(i++));
+            }
+        }
+        return ans;
+    }
     /*
         DES：
             求解AB，Sorted数组中位数
