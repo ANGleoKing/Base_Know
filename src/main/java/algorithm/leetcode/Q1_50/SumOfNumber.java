@@ -13,20 +13,7 @@ import java.util.*;
  * @Version V1.0
  **/
 public class SumOfNumber {
-    /*
-        DEC：
-            求解A+B为定值的数据下标
-     */
-    public int[] twoSum(int[] nums, int target) throws IllegalAccessException {
-        for (int i = 0; i < nums.length; i++) {
-            for (int j = i + 1; j < nums.length; j++) {
-                if (nums[j] == target - nums[i]) {
-                    return new int[]{i, j};
-                }
-            }
-        }
-        throw new IllegalAccessException("No solution");
-    }
+
 
     /*
      * DES：

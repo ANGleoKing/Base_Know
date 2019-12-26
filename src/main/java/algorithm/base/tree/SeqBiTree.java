@@ -1,9 +1,5 @@
 package algorithm.base.tree;
 
-import algorithm.base.queue.SeqQueue;
-
-import java.util.zip.Deflater;
-
 /**
  * @ClassName BiTree
  * @Description [顺序存储结构实现二叉树]
