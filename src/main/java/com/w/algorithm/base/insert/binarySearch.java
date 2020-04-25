@@ -11,7 +11,7 @@ public class binarySearch {
 
     public static void main(String[] args) {
 
-        int[] data = new int[]{33, 12, 25, 46, 37, 68, 19, 80};
+        int[] data = new int[] {33, 12, 25, 46, 37, 68, 19, 80};
         int[] nums = new int[data.length+1];
         for (int i = 0; i < data.length; i++) {
             nums[i+1] = data[i];
