@@ -22,6 +22,7 @@ public class BioDemoClient {
         int times = 5;
         try{
             while (times-- > 0){
+                Thread.sleep(1000);
                 System.out.println("No."+times+"_msg: Send Success");
                 buffer.append(times);
                 socket.getOutputStream().write(buffer.toString().getBytes());
@@ -30,7 +31,9 @@ public class BioDemoClient {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
-        }finally {
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } finally {
             socket.close();
         }
     }

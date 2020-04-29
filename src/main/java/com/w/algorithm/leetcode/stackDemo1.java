@@ -1,5 +1,8 @@
 package com.w.algorithm.leetcode;
 
+import java.util.Scanner;
+import java.util.Stack;
+
 /**
  * @ClassName stackDemo1
  * @Description [有效的括号]
@@ -8,7 +11,35 @@ package com.w.algorithm.leetcode;
  * @Version V1.0
  **/
 public class stackDemo1 {
-    public boolean isValid(String s) {
+    public static void main(String[] args) {
 
     }
+    public boolean isValid(String s) {
+        Scanner in = new Scanner(System.in);
+        char[] chars = in.nextLine().toCharArray();
+        Stack<Character> charStack = new Stack<Character>();
+
+        for (int i = 0; i < chars.length; i++) {
+            if (!charStack.empty()) {
+                if (isCouple(charStack.pop(), charStack.pop())) {
+
+                }
+            }
+        }
+        return false;
+    }
+
+    public boolean isCouple(char s1, char s2){
+        if ( ("[").equals(s1) && ("]").equals(s2) ){
+            return true;
+        }
+        if ( ("{").equals(s1) && ("}").equals(s2)){
+            return true;
+        }
+        if ( ("(").equals(s1) && (")").equals(s2)){
+            return true;
+        }
+        return false;
+    }
+
 }
