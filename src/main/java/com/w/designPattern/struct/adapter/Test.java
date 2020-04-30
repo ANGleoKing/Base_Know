@@ -1,4 +1,4 @@
-package com.w.designPattern.struct;
+package com.w.designPattern.struct.adapter;
 
 import com.w.designPattern.struct.adapter.AboutClass.ClassAdapter;
 import com.w.designPattern.struct.adapter.AboutClass.Target1;
