@@ -1,5 +1,7 @@
 package com.w.algorithm.base.exchange;
 
+import com.w.algorithm.base.common.Sort;
+
 /**
  * @ClassName bubbleSort
  * @Description [冒泡排序]
@@ -7,7 +9,7 @@ package com.w.algorithm.base.exchange;
  * @Date 2019/12/30 20:13
  * @Version V1.0
  **/
-public class bubbleSort {
+public class bubbleSort implements Sort {
 
     public static void main(String[] args) {
 
@@ -58,4 +60,17 @@ public class bubbleSort {
         }
     }
 
+    @Override
+    public void sort(int[] nums) {
+        for (int i = 0; i < nums.length; i++) {
+            for (int j = 0; j < nums.length; j++) {
+                if (nums[i] > nums[j]){
+                    nums[i] = nums[j] + nums[i];
+                    nums[j] = nums[i] - nums[j];
+                    nums[i] = nums[i] - nums[j];
+                }
+
+            }
+        }
+    }
 }

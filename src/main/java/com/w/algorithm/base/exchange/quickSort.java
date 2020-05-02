@@ -1,5 +1,7 @@
 package com.w.algorithm.base.exchange;
 
+import com.w.algorithm.base.common.Sort;
+
 /**
  * @ClassName quickSort
  * @Description [快排]
@@ -7,7 +9,7 @@ package com.w.algorithm.base.exchange;
  * @Date 2019/12/30 20:21
  * @Version V1.0
  **/
-public class quickSort {
+public class quickSort{
 
     public static void main(String[] args) {
 

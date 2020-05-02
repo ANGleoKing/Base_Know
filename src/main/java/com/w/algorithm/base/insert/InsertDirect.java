@@ -1,5 +1,8 @@
 package com.w.algorithm.base.insert;
 
+import com.w.algorithm.base.common.Sort;
+import com.w.algorithm.base.utils.SortUtils;
+
 /**
  * @ClassName InsertDirect
  * @Description [直接插入]
@@ -7,7 +10,7 @@ package com.w.algorithm.base.insert;
  * @Date 2019/12/30 19:28
  * @Version V1.0
  **/
-public class InsertDirect {
+public class InsertDirect implements Sort {
 
     public static void main(String[] args) throws Exception {
 
@@ -43,5 +46,26 @@ public class InsertDirect {
                 nums[j+1] = nums[0];//插入正确位置
         }
         return nums;
+    }
+
+    /*
+    * 简单方法：不断两两交换，直至到正确位置
+    *   缺陷：需要交换算法
+    *   改进方法：临时变量
+    * 默认第一个数为已有序的序列，故开始位置为1
+    * 从当前位置开始直到0号元素，只要小于前一个数则两两互换（此过程中因为前面是序列，故交换后当前数和之前序列构成一个新的有序序列）
+    * 重复上面两步，直至所有序列排列完毕
+    *
+    * 类比：插扑克牌
+    * */
+    @Override
+    public void sort(int[] nums) {
+        for (int i = 1; i < nums.length; i++) {
+            for (int j = i; j > 0; j--) {
+                if (nums[j] < nums[j-1]){
+                    SortUtils.swap(nums, j, j-1);
+                }
+            }
+        }
     }
 }
