@@ -1,4 +1,4 @@
-package com.w.algorithm.base.insert;
+package com.w.test;
 
 /**
  * @ClassName modelBoolean

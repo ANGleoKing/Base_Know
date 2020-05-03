@@ -1,10 +1,6 @@
 package com.w.algorithm.base;
 
-import com.w.algorithm.base.choise.Selection;
 import com.w.algorithm.base.common.Sort;
-import com.w.algorithm.base.insert.InsertDirect;
-import com.w.algorithm.base.insert.shellSort;
-import com.w.algorithm.base.merger.Merger;
 import com.w.algorithm.base.utils.SortUtils;
 
 import java.util.Arrays;
@@ -22,15 +18,16 @@ public class Test {
         Sort sort;
         int[] results;
         //无重复数据的数组
-        int[] noSameNums = new int[]{6,3,2,4,5,8,6,23,22};
+//        int[] noSameNums = new int[]{3,2,4,5,8,6,23,22};
         //有重复数据的数组
-        int[] sameNums = new int[]{2,3,4,1,45,6,7,5,3,3,2,1};
+        int[] sameNums = new int[]{2,3,4,1,5,6,7,5,3,3,2,1};
 
         //创建排序对象并执行方法
-        sort = new Merger();
-        sort.sort(noSameNums);
+        sort = new BaseNum();
+        sort.sort(sameNums);
         //打印排序结果
-        SortUtils.print(noSameNums);
+        System.out.print("after sorted:");
+        SortUtils.print(sameNums);
 
         //准备两个相同的乱序数组
         int[] nums = SortUtils.generateRandomArray();
@@ -43,8 +40,9 @@ public class Test {
 
         //检查结果
         int checkResult = SortUtils.check(nums, copyNums);
+        SortUtils.print(copyNums);
         //打印排序结果
-        System.out.println(checkResult == 1? "Right": ((checkResult == -1) ?  "length1 != length2" :"Wrong")  );
+        System.out.println("the result of check is :"+(checkResult == 1? "Right": ((checkResult == -1) ?  "length1 != length2" :"Wrong")));
 
     }
 }
