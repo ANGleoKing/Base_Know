@@ -1,4 +1,4 @@
-package com.w.algorithm.dataMining;
+package com.w.algorithm.dataMining.apriori;
 
 /**
  * @ClassName DataRules
