@@ -1,4 +1,6 @@
-package com.w.dataStruct.tree;
+package com.w.dataStruct.tree.bitree;
+
+import com.w.dataStruct.tree.bitree.LinkBiNode;
 
 /**
  * @ClassName LinkedBiTree

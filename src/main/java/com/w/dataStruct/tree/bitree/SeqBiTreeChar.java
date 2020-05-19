@@ -1,4 +1,4 @@
-package com.w.dataStruct.tree;
+package com.w.dataStruct.tree.bitree;
 
 /**
  * @ClassName SeqBiTree

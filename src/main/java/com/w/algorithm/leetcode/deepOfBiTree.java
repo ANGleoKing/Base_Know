@@ -8,8 +8,13 @@ package com.w.algorithm.leetcode;
  * @Version V1.0
  **/
 public class deepOfBiTree {
+    class TreeNode {
+    int val;
+    TreeNode left;
+    TreeNode right;
+    TreeNode(int x) { val = x; }
+}
     public int maxDepth(TreeNode root) {
-
         return deep(root, 1);
     }
 
@@ -20,9 +25,4 @@ public class deepOfBiTree {
         return Math.max(ld, rd);
     }
 }
-class TreeNode {
-      int val;
-      TreeNode left;
-      TreeNode right;
-      TreeNode(int x) { val = x; }
-}
+
