@@ -9,6 +9,8 @@ package algorithm.forOffer;
  **/
 public class Singleton {
 
+    //推荐解法：1静态常量区创建，2内部类
+
     //饿汉,线程安全
     private static class Singleton2{
 
@@ -55,7 +57,6 @@ public class Singleton {
 
     //静态内部类
     private static class Singleton5{
-
         private final static class SingletonHolder{
             private final static Singleton5 instance = new Singleton5();
         }
@@ -72,7 +73,6 @@ public class Singleton {
         private static Singleton6 getInstance(){
 
             if (singleton6 == null){
-
                 synchronized (Singleton6.class){
                     if (singleton6 == null){
                         singleton6 = new Singleton6();
